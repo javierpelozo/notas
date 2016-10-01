@@ -1,0 +1,29 @@
+{
+  "name": "notas",
+  "version": "1.0.0",
+  "description": "Guardar notas",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javierpelozo/notas.git"
+  },
+  "keywords": [
+    "notas"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javierpelozo/notas/issues"
+  },
+  "homepage": "https://github.com/javierpelozo/notas#readme",
+  "dependencies": {
+    "express": "*",
+    "body-parser": "*",
+    "angular": "*",
+    "mongo-db": "*",
+    "masonry-layout": "*"
+  }
+}
