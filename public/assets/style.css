@@ -1,3 +1,7 @@
 body {
     background-color: #E8E8E8;
 }
+
+header .cabecera {
+	padding: 10px;
+}
