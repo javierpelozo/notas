@@ -1,0 +1,116 @@
+body{
+    background-color: #E8E8E8;
+}
+header .cabecera {
+    padding: 10px;
+    background: #FFBB00;
+    font-family: "Lucida Sans Unicode";
+    font-size: 20px;
+}
+
+.notas{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1px;
+}
+.nota {
+    width: 200px;
+    margin: 5px;
+    height: auto;
+    float: left;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 2px;
+    padding: 7px;
+    -webkit-transition: box-shadow .3s;
+    transition: box-shadow .3s;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.nota:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+
+.eliminar-nota {
+    position: absolute;
+    top:5px;
+    right:5px;
+    display: none;
+    font-size: 30px;
+    color: rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+
+
+.nota:hover .eliminar-nota {
+    display: block;
+}
+
+
+.notas-editor {
+    width: 100%;
+    max-width: 600px;
+    padding: 16px;
+    margin: 16px auto;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 2px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.notas-editor .notas-editor-input {
+    width: 100%;
+    resize: none;
+    margin: 5px;
+    font-size: 14px;
+    border: none;
+    font-weight: 300;
+}
+
+.notas-editor .notas-editor-input:focus {
+    outline: 0;
+}
+
+.notas-editor .notas-editor-button {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    width: 100px;
+    background-color:#323232;
+    border-radius:28px;
+    border:1px solid darkgray;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:14px;
+    padding:8px 8px;
+    margin: 5px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+}
+
+.notas-editor .notas-editor-button:hover {
+    background-color:#262626;
+}
+
+.notas-editor .notas-editor-button:active {
+    position:relative;
+    top:1px;
+}
+
+.notas-editor .notas-editor-button:focus {
+    outline: 0;
+}

@@ -1,60 +1,70 @@
-(function() {
+(function () {
     "use strict";
+
     angular
         .module('notas')
         .controller('NotasController', ['apiService', 'colorService', NotasController]);
 
-    function NotasController(apiService, colorService) {
+
+    function NotasController(apiService, colorService){
+
         var notas = this;
+
         notas.editor = {
+            placeholder: "Ingrese una nueva nota..",
             text: ""
         };
 
-        notes.items = [];
+        notas.items = [];
 
         apiService
             .get()
-            .then(function(response) {
+            .then(function(response){
                 notas.items = response.data.notas;
             })
-            .catch(function(error) {
+            .catch(function(error){
                 console.log(error);
             });
 
-        notas.delete = function(nota) {
+
+        notas.eliminar = function(nota){
 
             notas.items.splice(notas.items.indexOf(nota), 1);
 
             apiService
-                .delete(nota._id)
-                .then(function(response) {
+                .eliminar(nota._id)
+                .then(function(response){
                     console.log(response.data.message);
                 })
-                .catch(function(error) {
+                .catch(function(error){
                     console.log(error);
                 });
+
         };
 
-        notas.add = function() {
-            var nuevaNota = {
-                id: new Date(),
-                text: notes.editor.text,
+        notas.agregar = function(){
+
+            var newNota = {
+                _id: new Date(),
+                text: notas.editor.text,
                 color: colorService.getRandom()
             };
 
-            if (notas.editor.text) {
-                notas.items.unshift(nuevaNota);
+            if(notas.editor.text){
+
+                notas.items.unshift(newNota);
 
                 apiService
-                    .post(nuevaNota)
-                    .then(function(response) {
+                    .post(newNota)
+                    .then(function(response){
                         console.log(response.data.message);
                     })
-                    .catch(function(error) {
+                    .catch(function(error){
                         console.log(error);
                     });
-                notes.editor.text = "";
+                notas.editor.text = "";
             }
+
         };
     }
 }());

@@ -2,10 +2,10 @@
     "use strict";
 
     /**
-     * @description masonry and masonry-note directives implement interactive animation
+    * @description masonry and masonry-note directives implement interactive animation
      *@link  http://masonry.desandro.com/ Masonry website
      *@link  https://github.com/klederson/angular-masonry-directive Masonry angular directive implementation
-     */
+    */
 
     angular
         .module('notas')
@@ -53,8 +53,8 @@
                     scope.update();
                 }
             };
-        })
-        .directive('masonryNote', function() {
+    })
+        .directive('masonryNota', function() {
             return {
                 restrict: 'A',
                 link: function(scope, elem) {
@@ -75,6 +75,6 @@
                         }
                     });
                 }
-            };
-        });
+        };
+    });
 })();
