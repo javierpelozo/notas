@@ -25,5 +25,8 @@
     "angular": "^1.4.9",
     "mongo-db": "*",
     "masonry-layout": "*"
+  },
+  "engines": {
+    "node": "*"
   }
 }
